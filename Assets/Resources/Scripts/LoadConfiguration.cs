@@ -24,7 +24,11 @@ public class LoadConfiguration {
         API.Initialize();
 
         // TESTING
-        Debug.Log(API.GetProduct("120267000000").name);
+
+        Product energy_drink = API.GetProduct("120267000000");
+        Debug.Log(energy_drink.name);
+        Debug.Log(energy_drink.ingredients);
+        Debug.Log(energy_drink.price.item.price);
     }
 
 

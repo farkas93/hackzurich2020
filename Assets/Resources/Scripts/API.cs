@@ -74,19 +74,6 @@ public static class API
 
 }
 
-/// <summary>
-/// Product class
-/// </summary>
-[System.Serializable]
-public class Product
-{
-    public string id;
-    public string language;
 
-    public string name;
-    public string product_name;
-    public string product_type;
 
-    public string slug;
-    public string short_description;
-}
+
