@@ -31,7 +31,6 @@ public class ConfigsManager {
 
 
         Result = (TextAsset)Resources.Load("Configuration/target_id_mapping");
-        Debug.Log(JsonUtility.FromJson<TargetIDMapping>(Result.text));
         _mappingConfig = new Dictionary<string, string>(){
             {"Cola_Bottle", "120974000000"},
             {"KEZZ_Chips", "101956300000"},
