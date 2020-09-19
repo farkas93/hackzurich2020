@@ -9,7 +9,11 @@ public class ProductInformationGetter : MonoBehaviour
 
     private Transform productInformation;
 
-    public void getProductInformation()
+    /// <summary>
+    /// If we identify a product, get the information to that product from the 
+    /// database and visualize it.
+    /// </summary>
+    public void GetProductInformation()
     {
         string productID = "";
 
@@ -21,7 +25,10 @@ public class ProductInformationGetter : MonoBehaviour
 
 
             //TODO: set texts in game objects accordingly
-            Instantiate(infoPrefab, this.transform);
+            productInformation = Instantiate(infoPrefab, transform);
+            productInformation.GetComponent<AccessInfoPrefabTexts>().SetProductInformation(p);
+
+
         }
         else
         {
@@ -29,7 +36,10 @@ public class ProductInformationGetter : MonoBehaviour
         }
     }
 
-    public void destroyProductInformation()
+    /// <summary>
+    /// Destroy the Product Information Panel
+    /// </summary>
+    public void DestroyProductInformation()
     {
         Destroy(productInformation);
     }

@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 7538698603537065172}
   - component: {fileID: 7538698603537065173}
   m_Layer: 5
-  m_Name: AllergiesPrefab
+  m_Name: AllergiesCanvasPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
