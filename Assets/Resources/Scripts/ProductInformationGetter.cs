@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class ProductInformationGetter : MonoBehaviour
@@ -35,9 +35,8 @@ public class ProductInformationGetter : MonoBehaviour
     {
 
         Product p = new Product();
-        Thread asyncThread = new Thread(() => API.GetProduct(id, out p));
-        asyncThread.Start();
-        while (asyncThread.IsAlive)
+        Task asyncThread = Task.Factory.StartNew(() => API.GetProduct(id, out p));
+        while (!asyncThread.IsCompleted)
         {
             yield return null;
         }
