@@ -20,6 +20,12 @@ public class AccessInfoPrefabTexts : MonoBehaviour
         productPriceText.text = p.price.item.price.ToString() + " " + p.price.currency;
     }
 
+    public void Update(){
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            DestroyPrefab();
+        }
+    }
+
     public void DestroyPrefab()
     {
         Destroy(gameObject);
