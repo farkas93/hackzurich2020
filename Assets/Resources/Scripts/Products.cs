@@ -13,8 +13,6 @@ public class Product
     public string language;
 
     public string name;
-    public string product_name;
-    public string product_type;
 
     public string slug;
     public string short_description;
