@@ -5,9 +5,8 @@ using UnityEngine;
 public class ProductInformationGetter : MonoBehaviour
 {
 
-    public Transform infoPrefab;
 
-    private Transform productInformation;
+    public Transform productInformationCanvas;
 
     /// <summary>
     /// If we identify a product, get the information to that product from the 
@@ -25,8 +24,8 @@ public class ProductInformationGetter : MonoBehaviour
 
 
             //TODO: set texts in game objects accordingly
-            productInformation = Instantiate(infoPrefab, transform);
-            productInformation.GetComponent<AccessInfoPrefabTexts>().SetProductInformation(p);
+            productInformationCanvas.GetComponent<AccessInfoPrefabTexts>().SetProductInformation(p);
+            productInformationCanvas.gameObject.SetActive(true);
 
 
         }
@@ -35,13 +34,6 @@ public class ProductInformationGetter : MonoBehaviour
             Debug.LogWarning("Key = \"" + gameObject.name + "\" is not found.");
         }
     }
-
-    /// <summary>
-    /// Destroy the Product Information Panel
-    /// </summary>
-    public void DestroyProductInformation()
-    {
-        Destroy(productInformation);
-    }
+    
 
 }
