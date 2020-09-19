@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Newtonsoft.Json;
 
 public class AccessInfoPrefabTexts : MonoBehaviour
 {
@@ -20,9 +19,5 @@ public class AccessInfoPrefabTexts : MonoBehaviour
         productNameText.text = p.name;
         productPriceText.text = p.price.item.price.ToString() + " " + p.price.currency;
     }
-
-    public void DestroyPrefab()
-    {
-        Destroy(gameObject);
-    }
+    
 }
