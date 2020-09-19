@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="coca-cola" size="0.110000 0.077568" />
+    <ImageTarget name="high-protein-himbeer-drink" size="0.090000 0.135898" />
+    <ImageTarget name="farmer-soft-choc-apfel" size="0.150000 0.128011" />
+    <ImageTarget name="konfektwaffeln" size="0.300000 0.085122" />
+    <ImageTarget name="ice_tea_peach2" size="0.070000 0.226957" />
+    <ImageTarget name="gomz" size="0.200000 0.233577" />
     <ImageTarget name="zweifel" size="0.150000 0.136429" />
   </Tracking>
 </QCARConfig>

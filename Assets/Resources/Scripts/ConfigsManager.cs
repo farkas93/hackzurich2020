@@ -32,8 +32,8 @@ public class ConfigsManager {
         Result = (TextAsset)Resources.Load("Configuration/target_id_mapping");
         Debug.Log(JsonUtility.FromJson<TargetIDMapping>(Result.text));
         _mappingConfig = new TargetIDMapping(
-            new string[] { "120974000000", "101956300000", "120299300000", "110518600000", "104209800000", "101055600000" }, 
-            new string[] { "Cola_Bottle", "KEZZ_Chips", "IceTea_Peach", "Konfektwaffeln", "Farmer", "Gomz" });
+            new string[] { "120974000000", "101956300000", "120299300000", "110518600000", "104209800000", "101055600000", "204514100000" }, 
+            new string[] { "Cola_Bottle", "KEZZ_Chips", "IceTea_Peach", "Konfektwaffeln", "Farmer", "Gomz", "HighProtein_Drink" });
 
         // TESTING
         if(_mappingConfig.ids.Length > 0)
