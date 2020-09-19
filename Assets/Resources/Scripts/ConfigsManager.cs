@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Newtonsoft.Json;
 
 
 public class ConfigsManager {
@@ -23,11 +24,12 @@ public class ConfigsManager {
     {
         Debug.Log("Loading api config");
         var Result = (TextAsset)Resources.Load("Configuration/configuration_api");
-        Debug.Log(JsonUtility.FromJson<ApiConfig>(Result.text));
-        _apiConfig = JsonUtility.FromJson<ApiConfig>(Result.text);
+        JsonSerializer serializer = new JsonSerializer();
+        _apiConfig = JsonConvert.DeserializeObject<ApiConfig>(Result.text);
+        Debug.Log(_apiConfig);
 
 
-        API.Initialize();
+        ProductInformationGetter.Initialize();
 
 
         Result = (TextAsset)Resources.Load("Configuration/target_id_mapping");
