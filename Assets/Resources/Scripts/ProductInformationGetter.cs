@@ -15,6 +15,7 @@ public class ProductInformationGetter : MonoBehaviour
 
 
     public Transform productInformationCanvas;
+    private List<Allergen> allergens;
 
     static string username;
     static string password;
@@ -93,7 +94,15 @@ public class ProductInformationGetter : MonoBehaviour
         if (res_prod != null)
         {
             productInformationCanvas.GetComponent<AccessInfoPrefabTexts>().SetProductInformation(res_prod);
+            allergens = res_prod.allergens;
             productInformationCanvas.gameObject.SetActive(true);
+            if (allergens.Count > 0)
+            {
+                foreach (Allergen a in allergens)
+                {
+                    Debug.Log("code: " + a.code + " ; name: " + a.name);
+                }
+            }
 
         }
         else
