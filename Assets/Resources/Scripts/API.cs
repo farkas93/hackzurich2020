@@ -53,8 +53,16 @@ public static class API
         {
             Credentials = credentials
         };
-
-        return WebClient.DownloadString(new Uri(url));
+        string ret_val = "";
+        try
+        {
+            ret_val = WebClient.DownloadString(new Uri(url));
+        }
+        catch
+        {
+            Debug.LogError("CONNTECTION TO SERVER FAILED");
+        }
+        return ret_val;
     }
 
     /// <summary>
