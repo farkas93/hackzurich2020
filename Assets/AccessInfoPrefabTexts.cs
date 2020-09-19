@@ -16,7 +16,7 @@ public class AccessInfoPrefabTexts : MonoBehaviour
     public void SetProductInformation(Product p)
     {
         ingredientsText.text = p.ingredients;
-        productNameText.text = p.product_name;
+        productNameText.text = p.name;
         productPriceText.text = p.price.item.price.ToString() + " " + p.price.currency;
     }
 

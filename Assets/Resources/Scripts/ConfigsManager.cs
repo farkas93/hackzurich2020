@@ -42,22 +42,23 @@ public class ConfigsManager {
         };
     
         // TESTING
-        if(_mappingConfig.Count > 0)
-        {
+        //if(_mappingConfig.Count > 0)
+        //{
 
-            foreach (string prod_id in _mappingConfig.Values)
-            {
+        //    foreach (string prod_id in _mappingConfig.Values)
+        //    {
 
-                Product p = API.GetProduct(prod_id);
-                Debug.Log(p.name);
-                Debug.Log(p.ingredients);
-                Debug.Log(p.price.item.price);
-            }
-        }
-        else
-        {
-            Debug.LogWarning("YOU DO NOT HAVE ANY MAPPINGS!");
-        }
+        //        Product p = new Product();
+        //        API.GetProduct(prod_id, out p);
+        //        Debug.Log(p.name);
+        //        Debug.Log(p.ingredients);
+        //        Debug.Log(p.price.item.price);
+        //    }
+        //}
+        //else
+        //{
+        //    Debug.LogWarning("YOU DO NOT HAVE ANY MAPPINGS!");
+        //}
 
 
     }

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class ProductInformationGetter : MonoBehaviour
@@ -20,13 +21,8 @@ public class ProductInformationGetter : MonoBehaviour
         if (ConfigsManager.MappingConfig.TryGetValue(gameObject.name, out productID))
         {
             Debug.Log("For key = \""+ gameObject.name + "\", productID =" +  productID);
-            Product p = API.GetProduct(productID);
 
-
-            //TODO: set texts in game objects accordingly
-            productInformationCanvas.GetComponent<AccessInfoPrefabTexts>().SetProductInformation(p);
-            productInformationCanvas.gameObject.SetActive(true);
-
+            StartCoroutine(ProductGetterCoroutine(productID));
 
         }
         else
@@ -35,5 +31,25 @@ public class ProductInformationGetter : MonoBehaviour
         }
     }
     
+    IEnumerator ProductGetterCoroutine(string id)
+    {
+
+        Product p = new Product();
+        Thread asyncThread = new Thread(() => API.GetProduct(id, out p));
+        asyncThread.Start();
+        while (asyncThread.IsAlive)
+        {
+            yield return null;
+        }
+        if(p != null)
+        {
+            productInformationCanvas.GetComponent<AccessInfoPrefabTexts>().SetProductInformation(p);
+            productInformationCanvas.gameObject.SetActive(true);
+
+        }
+        else
+            Debug.LogError("APP WAS NOT ABLE TO FETCH PRODUCT FROM DATABASE");
+       
+    }
 
 }

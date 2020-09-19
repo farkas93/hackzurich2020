@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Threading;
+using Newtonsoft.Json;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -35,11 +37,12 @@ public static class API
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    public static Product GetProduct(string id)
+    public static void GetProduct(string id, out Product res_prod)
     {
         string url = GetUrl(product_url, id);
         string result = DownloadString(url);
-        return JsonUtility.FromJson<Product>(result);
+        JsonSerializer serializer = new JsonSerializer();
+        res_prod = JsonConvert.DeserializeObject<Product>(result);
     }
 
     /// <summary>

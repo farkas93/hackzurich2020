@@ -22,8 +22,24 @@ public class Product
     public string ingredients;
 
     public PriceSummary price;
+    public List<Allergen> allergens;
 }
 
+
+
+/// <summary>
+/// Price Info Wrapper class
+/// </summary>
+[System.Serializable]
+public class Allergen
+{
+    public string code;
+    public string name;
+
+    public string contamination_code;
+    public string contamination;
+    
+}
 
 /// <summary>
 /// Price Info Wrapper class
@@ -50,6 +66,8 @@ public class Price
     public int quantity;
 
     public string unit;
-    public bool display_quantity;
-    
+    public bool varying_quantity;
+    public string display_quantity;
+
+
 }
