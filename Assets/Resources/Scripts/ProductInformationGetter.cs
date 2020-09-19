@@ -96,7 +96,7 @@ public class ProductInformationGetter : MonoBehaviour
             productInformationCanvas.GetComponent<AccessInfoPrefabTexts>().SetProductInformation(res_prod);
             allergens = res_prod.allergens;
             productInformationCanvas.gameObject.SetActive(true);
-            if (allergens.Count > 0)
+            if (allergens != null && allergens.Count > 0)
             {
                 foreach (Allergen a in allergens)
                 {

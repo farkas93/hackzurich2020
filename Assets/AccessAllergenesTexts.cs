@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class AccessAllergenesTexts : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    List<GameObject> allergenList;
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            gameObject.SetActive(false);
+        }
     }
+
+
 }
