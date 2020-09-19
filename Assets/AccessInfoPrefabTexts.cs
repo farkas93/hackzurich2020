@@ -23,7 +23,6 @@ public class AccessInfoPrefabTexts : MonoBehaviour
         productPriceText.text = p.price.item.price.ToString() + " " + p.price.currency;
     }
 
-<<<<<<< HEAD
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -49,7 +48,4 @@ public class AccessInfoPrefabTexts : MonoBehaviour
         res = Regex.Replace(res, @"</strong>", "");
         return res;
     }
-    
-=======
->>>>>>> d752e05a4ff63538bedd469ff608d61155a5fec9
 }
