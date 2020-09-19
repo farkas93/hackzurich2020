@@ -1,0 +1,10 @@
+{
+  "username": "mavi@nest.local",
+  "password": "W3lc0me!2018$",
+  "base_url": "https://visualizer.nestcollaboration.ch",
+  "realtime_url": "/Realtime/data/",
+  "timeline_url": "/Backend/api/v1/datapoints/<id>/timeline?startDate=<startDate>&endDate=<endDate>",
+  "datapoint_collection_url": "/Backend/api/v1/datapointcollections/f2179b46-bfb4-4e49-8f7b-bf2bd03d01c1",
+  "all_datapoint_collection_url": "/Backend/api/v1/datapointcollections/",
+  "info_url": "/Backend/api/v1/datapoints/"
+}
