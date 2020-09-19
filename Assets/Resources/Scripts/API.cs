@@ -19,10 +19,10 @@ public static class API
 
     public static void Initialize()
     {
-        username = LoadConfiguration.ApiConfig.username;
-        password = LoadConfiguration.ApiConfig.password;
-        base_url = LoadConfiguration.ApiConfig.base_url;
-        product_url = LoadConfiguration.ApiConfig.product_url;
+        username = ConfigsManager.ApiConfig.username;
+        password = ConfigsManager.ApiConfig.password;
+        base_url = ConfigsManager.ApiConfig.base_url;
+        product_url = ConfigsManager.ApiConfig.product_url;
 
         credentials = new CredentialCache
         {
