@@ -515,11 +515,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-<<<<<<< HEAD
   - {fileID: 272424484}
-=======
-  - {fileID: 1991232953}
->>>>>>> 86f28e3a27710c1fded6691a38996f6761ccd714
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -832,8 +828,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 333798274}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
-<<<<<<< HEAD
-=======
 --- !u!21 &347562965
 Material:
   serializedVersion: 6
@@ -1025,7 +1019,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
->>>>>>> 86f28e3a27710c1fded6691a38996f6761ccd714
 --- !u!1 &522764406
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,11 +1130,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!21 &565612716
-=======
---- !u!21 &569357908
->>>>>>> 86f28e3a27710c1fded6691a38996f6761ccd714
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -1150,11 +1139,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: 'zweifelMaterial
 
-<<<<<<< HEAD
     15372'
-=======
-    24752'
->>>>>>> 86f28e3a27710c1fded6691a38996f6761ccd714
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -2122,11 +2107,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-<<<<<<< HEAD
   - {fileID: 267941323}
-=======
-  - {fileID: 1785993415}
->>>>>>> 86f28e3a27710c1fded6691a38996f6761ccd714
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2901,11 +2882,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-<<<<<<< HEAD
   - {fileID: 104001034}
-=======
-  - {fileID: 2114329151}
->>>>>>> 86f28e3a27710c1fded6691a38996f6761ccd714
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3784,11 +3761,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-<<<<<<< HEAD
   - {fileID: 565612716}
-=======
-  - {fileID: 686680942}
->>>>>>> 86f28e3a27710c1fded6691a38996f6761ccd714
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4708,11 +4681,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-<<<<<<< HEAD
   - {fileID: 1041285515}
-=======
-  - {fileID: 644301453}
->>>>>>> 86f28e3a27710c1fded6691a38996f6761ccd714
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5131,20 +5100,14 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1896499971}
   m_CullTransparentMesh: 0
-<<<<<<< HEAD
---- !u!43 &1901269735
-Mesh:
-=======
 --- !u!21 &1991232953
 Material:
   serializedVersion: 6
->>>>>>> 86f28e3a27710c1fded6691a38996f6761ccd714
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ImageTargetMesh17620
-<<<<<<< HEAD
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5301,21 +5264,6 @@ Material:
     offset: 0
     size: 0
     path: 
-=======
-  m_Shader: {fileID: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Floats: []
-    m_Colors: []
->>>>>>> 86f28e3a27710c1fded6691a38996f6761ccd714
 --- !u!1 &2110811465
 GameObject:
   m_ObjectHideFlags: 0
@@ -5364,11 +5312,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-<<<<<<< HEAD
   - {fileID: 1101054323}
-=======
-  - {fileID: 347562965}
->>>>>>> 86f28e3a27710c1fded6691a38996f6761ccd714
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5567,11 +5511,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-<<<<<<< HEAD
   - {fileID: 808013094}
-=======
-  - {fileID: 569357908}
->>>>>>> 86f28e3a27710c1fded6691a38996f6761ccd714
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
