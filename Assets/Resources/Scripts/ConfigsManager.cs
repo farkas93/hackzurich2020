@@ -8,19 +8,22 @@ using UnityEngine.UI;
 using Newtonsoft.Json;
 
 
-public class ConfigsManager {
+public class ConfigsManager : MonoBehaviour {
     
     private static ApiConfig _apiConfig;
     private static Dictionary<string, string> _mappingConfig;
+    private static Dictionary<string, string> _mappingPicture;
 
     public static ApiConfig ApiConfig { get => _apiConfig; }
     public static Dictionary<string, string> MappingConfig { get => _mappingConfig; }
+    public static Dictionary<string, string> MappingPicture { get => _mappingPicture; }
+
+    public Sprite[] images;
 
     /// <summary>
     /// Load API config from json file
     /// </summary>
-    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-    public static void LoadConfigFiles()
+    public void Awake()
     {
         Debug.Log("Loading api config");
         var Result = (TextAsset)Resources.Load("Configuration/configuration_api");
@@ -42,7 +45,17 @@ public class ConfigsManager {
             {"Gomz", "101055600000"},
             {"HighProtein_Drink", "204514100000"}
         };
-    
+
+        _mappingPicture = new Dictionary<string, string>(){
+            {"Cola_Bottle", "120974000000"},
+            {"KEZZ_Chips", "101956300000"},
+            {"IceTea_Peach", "120299300000"},
+            {"Konfektwaffeln", "110518600000"},
+            {"Farmer", "104209800000"},
+            {"Gomz", "101055600000"},
+            {"HighProtein_Drink", "204514100000"}
+        };
+
         // TESTING
         //if(_mappingConfig.Count > 0)
         //{
