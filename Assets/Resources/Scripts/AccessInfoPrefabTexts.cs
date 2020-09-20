@@ -9,6 +9,7 @@ public class AccessInfoPrefabTexts : MonoBehaviour
     public Text ingredientsText;
     public Text productNameText;
     public Text productPriceText;
+    public Image productImg;
 
     public Transform allergenCanvas; 
 
@@ -16,11 +17,12 @@ public class AccessInfoPrefabTexts : MonoBehaviour
     /// Set the UI objects text to the information stored within our product.
     /// </summary>
     /// <param name="p"> The instance of the Product to visualize</param>
-    public void SetProductInformation(Product p)
+    public void SetProductInformation(Product p, Sprite image)
     {
         ingredientsText.text = FilterXMLCode(p.ingredients);
         productNameText.text = p.name;
         productPriceText.text = p.price.item.price.ToString() + " " + p.price.currency;
+        productImg.sprite = image;
     }
 
     public void Update()
@@ -44,8 +46,12 @@ public class AccessInfoPrefabTexts : MonoBehaviour
     /// <returns></returns>
     private string FilterXMLCode(string inp)
     {
-        string res = Regex.Replace(inp, @"<strong>", "");
-        res = Regex.Replace(res, @"</strong>", "");
-        return res;
+        if (inp != null)
+        {
+            string res = Regex.Replace(inp, @"<strong>", "");
+            res = Regex.Replace(res, @"</strong>", "");
+            return res;
+        }
+        else return "";
     }
 }

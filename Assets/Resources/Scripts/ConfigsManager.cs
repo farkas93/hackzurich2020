@@ -12,11 +12,11 @@ public class ConfigsManager : MonoBehaviour {
     
     private static ApiConfig _apiConfig;
     private static Dictionary<string, string> _mappingConfig;
-    private static Dictionary<string, string> _mappingPicture;
+    private static Dictionary<string, Sprite> _mappingPicture;
 
     public static ApiConfig ApiConfig { get => _apiConfig; }
     public static Dictionary<string, string> MappingConfig { get => _mappingConfig; }
-    public static Dictionary<string, string> MappingPicture { get => _mappingPicture; }
+    public static Dictionary<string, Sprite> MappingPicture { get => _mappingPicture; }
 
     public Sprite[] images;
 
@@ -46,14 +46,14 @@ public class ConfigsManager : MonoBehaviour {
             {"HighProtein_Drink", "204514100000"}
         };
 
-        _mappingPicture = new Dictionary<string, string>(){
-            {"Cola_Bottle", "120974000000"},
-            {"KEZZ_Chips", "101956300000"},
-            {"IceTea_Peach", "120299300000"},
-            {"Konfektwaffeln", "110518600000"},
-            {"Farmer", "104209800000"},
-            {"Gomz", "101055600000"},
-            {"HighProtein_Drink", "204514100000"}
+        _mappingPicture = new Dictionary<string, Sprite>(){
+            {"Cola_Bottle", images[0]},
+            {"KEZZ_Chips", images[1]},
+            {"IceTea_Peach", images[2]},
+            {"Konfektwaffeln", images[3]},
+            {"Farmer", images[4]},
+            {"Gomz", images[5]},
+            {"HighProtein_Drink", images[6]}
         };
 
         // TESTING

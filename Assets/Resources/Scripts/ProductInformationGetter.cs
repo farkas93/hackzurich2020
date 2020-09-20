@@ -24,6 +24,8 @@ public class ProductInformationGetter : MonoBehaviour
     static string base_url;
     static string product_url;
 
+    public AccessAllergenesTexts aat;
+
     public static void Initialize()
     {
         username = ConfigsManager.ApiConfig.username;
@@ -93,15 +95,14 @@ public class ProductInformationGetter : MonoBehaviour
 
         if (res_prod != null)
         {
-            productInformationCanvas.GetComponent<AccessInfoPrefabTexts>().SetProductInformation(res_prod);
+            Sprite img;
+            ConfigsManager.MappingPicture.TryGetValue(gameObject.name, out img);
+            productInformationCanvas.GetComponent<AccessInfoPrefabTexts>().SetProductInformation(res_prod, img);
             allergens = res_prod.allergens;
             productInformationCanvas.gameObject.SetActive(true);
             if (allergens != null && allergens.Count > 0)
             {
-                foreach (Allergen a in allergens)
-                {
-                    Debug.Log("code: " + a.code + " ; name: " + a.name);
-                }
+                aat.SetAllergeneList(allergens);
             }
 
         }
